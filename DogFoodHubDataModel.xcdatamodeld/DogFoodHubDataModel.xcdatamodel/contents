@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DogfoodItem" representedClassName="DogfoodItem" syncable="YES" codeGenerationType="class">
+        <attribute name="brand" optional="YES" attributeType="String"/>
+        <attribute name="calcium" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="calories" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="details" optional="YES" attributeType="String">
+            <userInfo>
+                <entry key="mappedKeyName" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="fat" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fiber" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="foodType" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="ingredients" optional="YES" attributeType="String"/>
+        <attribute name="lifeStage" optional="YES" attributeType="String"/>
+        <attribute name="madeIn" optional="YES" attributeType="String"/>
+        <attribute name="moisture" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="protein" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sku" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DogfoodReview" inverseName="parentDogfoodItem" inverseEntity="DogfoodReview"/>
+    </entity>
+    <entity name="DogfoodReview" representedClassName=".DogfoodReview" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="stars" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="parentDogfoodItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DogfoodItem" inverseName="reviews" inverseEntity="DogfoodItem"/>
+    </entity>
+    <elements>
+        <element name="DogfoodItem" positionX="81" positionY="-144" width="128" height="344"/>
+        <element name="DogfoodReview" positionX="90" positionY="27" width="128" height="118"/>
+    </elements>
+</model>
