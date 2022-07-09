@@ -1,5 +1,6 @@
 # DogFoodHub
 
+For all those of dog lovers out there, this app helps you to find dogfoods and review them based on your dog's preferencies.
 
 
 https://user-images.githubusercontent.com/77220332/178103457-adcebf7e-0343-4978-88e8-000cc780da71.mov
